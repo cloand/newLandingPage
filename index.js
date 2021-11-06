@@ -6,9 +6,12 @@ function dropDown() {
     if (!flag) {
         flag = 1;
         obj[0].style.display = "block";
+        obj[0].style.animation="dropeffect 1s 0s forwards normal"
     } else {
         flag = 0;
-        obj[0].style.display = "none";
+        
+        obj[0].style.animation = "closing 1s 0s forwards normal";
+      
     }
 }
 

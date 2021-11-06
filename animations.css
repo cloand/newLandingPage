@@ -1,0 +1,68 @@
+
+
+.credit-card:hover{
+    animation:  cardslide 1s .5s forwards normal ease-in-out;
+   
+}
+.credit-card{
+    animation:  reversing 1s .5s reverse normal ease-in-out;
+}
+
+.catelog{
+    animation: dropeffect 1s 0s forwards normal;
+    animation:closing 1s 0s forwards normal;
+}
+
+
+
+
+@keyframes cardslide {
+    from{
+        transform: rotate(330deg);
+        
+    }to{
+        transform: rotate(-0deg);
+        right:0%;
+        z-index: 2;
+        transform: scale(1.4);
+    }
+} 
+@keyframes reversing {
+    from{
+        transform: rotate(-0deg);
+        right:0%;
+        z-index: 2;
+        transform: scale(1.4);
+    }to{
+        transform: rotate(330deg);
+    }
+} 
+
+
+
+
+@keyframes selecting {
+        from{
+            background-blend-mode: soft-light;
+            scale:0%;
+        }to{
+            opacity: 100%;
+            scale: 1%;
+        }
+}
+
+@keyframes dropeffect {
+    from{
+        transform:rotate(90deg);
+        right:20%;
+        opacity:0;
+    }
+}
+
+@keyframes closing {
+    to{
+        transform:rotate(90deg);
+        right:20%;
+        opacity: 0%;
+    }
+}
