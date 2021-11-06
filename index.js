@@ -1,12 +1,12 @@
 
 var flag = 0;
-var obj= document.getElementsByClassName("catelog");
+var obj = document.getElementsByClassName("catelog");
 
-function dropDown(){
-    if(!flag){
-        flag =  1;
+function dropDown() {
+    if (!flag) {
+        flag = 1;
         obj[0].style.display = "block";
-    }else{
+    } else {
         flag = 0;
         obj[0].style.display = "none";
     }
@@ -14,11 +14,11 @@ function dropDown(){
 
 var x = window.matchMedia('(min-width:750px)');
 
-function checkSize(x){
-    if(x.matches){
+function checkSize(x) {
+    if (x.matches) {
         flag = 1;
         dropDown();
-    }else{
+    } else {
         flag = 0;
         console.log("hello");
     }

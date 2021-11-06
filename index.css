@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Open+Sans:wght@500&family=Saira+Condensed:wght@200&display=swap');
+
 
 *,*::before,*::after{
     box-sizing:border-box;
@@ -9,7 +11,17 @@
     --grey:#a8a3a3;
     --light_orange:#f27a61;
     --dark_orange:#ee6c53;
+    
 
+  }
+
+  .sans{
+    font-family: 'Open Sans', sans-serif;
+    
+  }
+
+  .size1{
+      font-size: 1rem;
   }
   
   a{
@@ -112,9 +124,16 @@ p{
     font-size:.6rem;
   }
   
+  main{
+    padding-top: 10em;
+  }
+
   header{
-    
+    position:fixed;
+    width:100%;
     padding:1rem 0;
+    z-index: 2;
+
   }
   
   .all-items{
@@ -124,7 +143,9 @@ p{
     display:flex;
     flex-wrap:wrap;
     align-items: center;
-  
+    padding:0 1em;
+  border-radius: 20px;
+  background: white;
   }
   
   .logo{
@@ -302,7 +323,7 @@ p{
   }
   .green-button{
     color:white;
-    padding:.5em 1em;
+    padding:1.4em 3.5em;
     border-radius:10px;
     background:var(--green);
   }
@@ -375,8 +396,8 @@ p{
     
   }
   img.online{
-    width:50px;
-    height:50px;
+    width:40%;
+    height:40%;
     border-radius:50%;
   }
   
@@ -431,7 +452,7 @@ li.logan{
   }
 
   .content{
-    max-width: 400px;
+    max-width: 800px;
     margin:0 auto;
     text-align: center;
    
@@ -707,7 +728,7 @@ svg.designer3{
 }
 
 .linking-items{
-  padding-top: 2em;
+  
   display:flex;
 flex-wrap: wrap;
 
@@ -723,10 +744,7 @@ flex-wrap: wrap;
 }
 
 .social-links{
-  padding-bottom: 2em;
-  padding-top: 4em;
-  
-
+  padding: 4em 0 2em 0;
 }
 
 
@@ -750,7 +768,7 @@ flex-wrap: wrap;
 .start-button{
   background: var(--green);
   color:white;
-  width:50%;
+  width:30%;
   margin:0 auto;
 padding:1.5em;
 border-radius: 10px;
@@ -870,7 +888,7 @@ border-radius: 10px;
 
  .all-items{
    justify-content: space-between;
- 
+ padding:1em 1.5em 1em .5em; 
  }
 
  .options{
@@ -889,15 +907,16 @@ border-radius: 10px;
 
 .catelog{
   display: none;
-  position:absolute;
+  position: fixed;
   right:10%;
-  top:10%;
+  top:9%;
   z-index: 1;
   padding:1em;
   border:1px solid var(--dark_orange);
   border-radius: 15px;
   background:white;
   width: 26%;
+  transform: rotate(-5deg);
 }
 .cate-list{
   padding: .5em 0;
@@ -923,7 +942,10 @@ border-radius: 10px;
   
 }
 .social-links{
-  padding-bottom: 6em;
+  padding: 3em 0;
+  width:60%;
+  margin:0 auto;
+
 }
 .telling-left{
   text-align: center;
@@ -931,7 +953,10 @@ border-radius: 10px;
 .sigma{
   text-align: center;
 }
-
+main{
+    padding-top: 5em;
+  }
+ 
 }
 
 @media screen and (max-width : 650px){
