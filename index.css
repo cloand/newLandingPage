@@ -11,9 +11,15 @@
     --grey:#a8a3a3;
     --light_orange:#f27a61;
     --dark_orange:#ee6c53;
-    
+    --border-size:.2em;
 
   }
+
+  
+    main{
+      padding-top: 7em;
+    }
+  
 
   .sans{
     font-family: 'Open Sans', sans-serif;
@@ -149,6 +155,7 @@ p{
   border-radius: 20px;
   background: white;
   }
+
   
   .logo{
     max-width:20%;
@@ -177,7 +184,27 @@ p{
   .center-items{
     margin: 0 auto;
     
-    
+  }
+
+  .effect{
+    position:relative;
+  }
+
+  .effect::before{
+    content:'';
+    left:0%;
+    right:0%;
+    bottom:0%;
+    height:8%;
+    background:var(--green);
+    position: absolute;
+    transform:scaleX(0);
+    transform-origin: left;
+    transition:transform .3s ease-in-out;
+  }
+
+  .effect:hover::before{
+    transform:scaleX(1);
   }
   
   .grey+.grey{
@@ -328,13 +355,64 @@ p{
     padding:1.4em 3.5em;
     border-radius:10px;
     background:var(--green);
+  position:relative;
   }
+
+  .green-button::before{
+    content:'';
+    position:absolute;
+    top:0%;
+    bottom:0%;
+    left:0%;
+    right:0%;
+    border-radius: 10px;
+    border:var(--border-size) solid grey;
+    z-index: -1;
+    transition: top,bottom,left,right, 0.3s ease-in-out;
+  }
+
+  .green-button:hover::before{
+    top:calc(var(--border-size)*-2);
+    bottom:calc(var(--border-size)*-2);
+    left:calc(var(--border-size)*-2);
+    right:calc(var(--border-size)*-2);
+  }
+ 
+
   .white-button{
     color:#9a9495;
     padding:.5em;
     display:flex;
     align-items:center;
+   position:relative;
+   z-index: 1;
+  transition: color .5s ease-in-out;
   }  
+  .white-button::before{
+    content:'';
+    top:0%;
+    bottom: 0%;
+    left:0%;
+    right:0%;
+    
+    
+    position: absolute;
+    z-index: -1;
+    background: var(--green);
+    transform:scaleX(0);
+    transform-origin: left;
+   transition:transform .5s ease-in-out;
+   border-radius: 10px;
+  }
+
+  .white-button:hover::before{
+    transform: scaleX(1);
+    
+  }
+  .white-button:hover{
+    color:white;
+  }
+ 
   .credit-card{
     background-image:linear-gradient(to right,#fe937d,#ff937e,#ff9782,#ff9f89);
     box-shadow:0px 20px 100px .2px #4E4D4D;
@@ -775,11 +853,33 @@ flex-wrap: wrap;
   margin:0 auto;
 padding:1.5em;
 border-radius: 10px;
+position:relative;
 }
 
 .none{
   color:white;
 }
+
+.start-button::before{
+  content:'';
+  position:absolute;
+  top:0%;
+  bottom:0%;
+  left:0%;
+  right:0%;
+  border-radius: 10px;
+  border:var(--border-size) solid grey;
+  z-index: -1;
+  transition: top,bottom,left,right, 0.3s ease-in-out;
+}
+
+.start-button:hover::before{
+  top:calc(var(--border-size)*-2);
+  bottom:calc(var(--border-size)*-2);
+  left:calc(var(--border-size)*-2);
+  right:calc(var(--border-size)*-2);
+}
+
 .spacing{
   padding:6em;
 }
@@ -926,16 +1026,15 @@ border-radius: 10px;
 .cate-list{
     position:relative;
   padding: .5em 0;
-  transition: background 2.9s cubic-bezier(0.68, 2, 0.02, 0.5);
+  
   border-radius: 20px;
   padding:1em;
 }
 .cate-list:hover{
-    
+  transition: background 2.9s cubic-bezier(0.68, 2, 0.02, 0.5);
   background: var(--light_orange);
   border-radius: 20px;
   padding:1em;
-  transform:rotate(45deg);
 }
 .footer-bar{
   display:block;
@@ -966,9 +1065,7 @@ border-radius: 10px;
 }
 
 
-main{
-    padding-top: 5em;
-  }
+
  
 }
 

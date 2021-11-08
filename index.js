@@ -20,6 +20,7 @@ var x = window.matchMedia('(min-width:750px)');
 function checkSize(x) {
     if (x.matches) {
         flag = 1;
+        obj[0].style.display = "none";
         dropDown();
     } else {
         flag = 0;
