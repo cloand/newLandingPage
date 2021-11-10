@@ -30,3 +30,13 @@ function checkSize(x) {
 
 checkSize(x);
 x.addListener(checkSize);
+
+var objects = new IntersectionObserver(entries =>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('clientdesign')
+        }
+    })
+})
+
+objects.observe( document.querySelector('li.logan'));

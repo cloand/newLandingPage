@@ -1,12 +1,13 @@
 
 :root{
     --waiting-time:1s;
+    --start-waiting-time:0s;
 }
 
 
 .credit-card{
     transform:scale(0);
-    animation:  carders 2s calc(var(--waiting-time)+2s) forwards normal ;
+    animation:  carders 2s calc(var(--waiting-time) + 1s) forwards normal ;
 }
 
 .catelog{
@@ -20,11 +21,11 @@ header{
 
 .small-box{
     transform: scale(0);
-    animation:fromleft 2s calc(var(--waiting-time)+3s) forwards normal;
+    animation:fromleft 2s calc(var(--waiting-time) + 2s) forwards normal;
 }
 .another-box{
     transform: scale(0);
-    animation:fromdown 2s calc(var(--waiting-time)+3s) forwards normal;
+    animation:fromdown 2s calc(var(--waiting-time) + 2s) forwards normal;
 }
 
 .scaledown{
@@ -37,7 +38,7 @@ header{
 .scaling{
     transform:scaleX(0);
     transform-origin: right;
-    animation: scaleleft 1s calc(var(--waiting-time)+2s) forwards normal;
+    animation: scaleleft 1s calc(var(--waiting-time) + 1s) forwards normal;
 }
 
 .left{
@@ -56,10 +57,44 @@ header{
 }
 
 .designcredit{
-    animation:fromdown 3s calc(var(--waiting-time)+2s) forwards normal;
+    animation:fromdown 3s calc(var(--waiting-time) + 1s) forwards normal;
 }
 
+.colored1 , .colored2 , .colored3 , .colored4 , .colored5 , .colored6{
+    transform-origin: top;
+}
+.colored1{
+    animation:scaletop .7s calc(var(--start-waiting-time) + 1s) forwards normal ease-in; 
+}
 
+.colored2{
+    animation:scaletop .7s calc(var(--start-waiting-time) + .8s) forwards normal ease-in; 
+}
+.colored3{
+    animation:scaletop .8s calc(var(--start-waiting-time) + .6s) forwards normal ease-in; 
+}
+
+.colored4{
+    animation:scaletop .8s calc(var(--start-waiting-time) + .4s) forwards normal ease-in; 
+}
+
+.colored5{
+    animation:scaletop 1s calc(var(--start-waiting-time) + .2s) forwards normal ease-in; 
+}
+.colored6{
+    animation:scaletop 1s var(--start-waiting-time) forwards normal ease-in; 
+}
+
+.clientdesign{
+    transform: scale(0);
+    animation:fromtop 2s forwards normal;
+}
+
+@keyframes scaletop {
+    to{
+        transform: scaleY(0);
+    }
+}
 
 @keyframes carders {
     from{
