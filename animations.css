@@ -1,21 +1,109 @@
 
-
-.credit-card:hover{
-    animation:  cardslide 1s .5s forwards normal ease-in-out;
-   
+:root{
+    --waiting-time:1s;
 }
+
+
 .credit-card{
-    animation:  reversing 1s .5s reverse normal ease-in-out;
+    transform:scale(0);
+    animation:  carders 2s calc(var(--waiting-time)+2s) forwards normal ;
 }
 
 .catelog{
     animation: dropeffect 1s 0s forwards normal;
     animation:closing 1s 0s forwards normal;
 }
+header{
+    transform: scale(0);
+    animation:fromleft 2s var(--waiting-time) forwards normal ;
+}
+
+.small-box{
+    transform: scale(0);
+    animation:fromleft 2s calc(var(--waiting-time)+3s) forwards normal;
+}
+.another-box{
+    transform: scale(0);
+    animation:fromdown 2s calc(var(--waiting-time)+3s) forwards normal;
+}
+
+.scaledown{
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin:top;
+    animation: scale 1s var(--waiting-time) forwards normal;
+}
+
+.scaling{
+    transform:scaleX(0);
+    transform-origin: right;
+    animation: scaleleft 1s calc(var(--waiting-time)+2s) forwards normal;
+}
+
+.left{
+    transform:scale(0);
+    animation:fromleft 2s var(--waiting-time) forwards normal;
+}
+
+.downeffect{
+    transform: scale(0);
+    animation:fromtop 3s var(--waiting-time) forwards normal;
+}
+
+.designstart{
+    transform: scale(0);
+    animation:fromdown 2s var(--waiting-time) forwards normal;
+}
+
+.designcredit{
+    animation:fromdown 3s calc(var(--waiting-time)+2s) forwards normal;
+}
 
 
 
+@keyframes carders {
+    from{
+        transform:translateX(500px);
+        
+    }to{
+        transform: translateX(0);
+        
+        transform:rotate(330deg);
+    }
+}
 
+@keyframes scaleleft {
+    to{
+        transform:scaleX(1);
+    }
+}
+
+@keyframes scale {
+    to{
+      transform: scaleY(1);
+    }
+}
+
+@keyframes fromtop {
+    from{
+        transform:translateY(-100%);
+        opacity: 0;
+    }to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fromdown {
+    from{
+        transform:translateY(50%);
+        opacity: 0;
+    }to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
 
 @keyframes cardslide {
     from{
@@ -50,6 +138,18 @@
             opacity: 100%;
             scale: 1%;
         }
+}
+
+
+
+@keyframes fromleft{
+    from{
+        transform:translateX(-10%);
+        opacity: 0;
+    }to{
+        transform:translate(0);
+        opacity: 1;
+    }
 }
 
 @keyframes dropeffect {
