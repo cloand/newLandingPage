@@ -503,10 +503,13 @@ p{
     width:15%;
   }
   
-  section{
+  .toppers{
     position: fixed;
     z-index: -1;
     margin-top: 7em;
+  }
+  .middlers{
+    padding:0;
   }
 
   .card1{
@@ -568,10 +571,25 @@ p{
     align-items: center;
   }
 
-li.logan{
-  
+.logan{
+
  width:10%;
-  
+transform:scaleX(0);
+opacity:0;
+transition: all 2s ease-out;
+transform-origin: left;
+}
+
+.titling{
+  transform:translateY(100%);
+  opacity:0;
+  transition:all 2s ease; 
+}
+
+.dsc{
+  transform:translateY(300%);
+  opacity:0;
+  transition:all 2s ease;
 }
 
   img.fitter{
@@ -591,13 +609,16 @@ li.logan{
   .upper{
     text-align: center;
     padding-bottom: 4em;
+    
+   transform: translateX(100px);
+   opacity:0;
   }
 
   .content{
     max-width: 800px;
     margin:0 auto;
     text-align: center;
-   
+  
   }
 
   .inner-telling{

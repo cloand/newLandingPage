@@ -85,9 +85,24 @@ header{
     animation:scaletop 1s var(--start-waiting-time) forwards normal ease-in; 
 }
 
-.clientdesign{
-    transform: scale(0);
-    animation:fromtop 2s forwards normal;
+.removing{
+    opacity:1;
+    transform:translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.onlyscale{
+    transform:scaleX(1);
+    opacity:1;
+}
+
+.clients_design{
+    transform: translateY(0);
+   opacity:1;
+}
+
+.addposition{
+    position:fixed;
 }
 
 @keyframes scaletop {
