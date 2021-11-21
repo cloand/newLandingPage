@@ -343,5 +343,3 @@ window.addEventListener('scroll', () => {
 });
 
 var listings = document.querySelectorAll('.only-center');
-
-
