@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome !!</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <header>
+            <img src="https://i.postimg.cc/W3jK4j6j/online-payment-with-mobile-2645883-2218295.png">
+        </header>
+        <div class="content">
+            <h1>Welcome home</h1>
+            <p>We always have a cup of hot tea and a warm blanket</p>
+        </div>
+        <form>
+            <input type="text" placeholder="Your name" name="name" required><br>
+            <input type="text" placeholder="Your Email" name="email" required><br>
+            <input type="text" name="dob" placeholder="Your Date Of Birth" required
+            onfocus="(this.type = 'date')";
+            onblur="(this.type = 'text')"><br>
+            <select name="role" placeholder="Choose your role">
+                <option value="retail"> Retail </option>
+                <option value="organization"> Organization </option>
+            </select><br>
+            <div class="agreement">
+                <label>
+                    <input type="checkbox" class="check" name="conditions" required>
+                    <div>
+                    I'm okay with Terms of Service
+                    </div>
+                </label>
+                <br>
+            </div>
+            <input class = "submit" type="submit" value="Sign Up"><br>
+        </form>
+    </main>
+</body>
+
+</html>

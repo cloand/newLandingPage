@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,CAAA;EACC,KAAK,EAAC,IAAI;CACb",
+    "sources": [
+        "atyle.scss"
+    ],
+    "names": [],
+    "file": "atyle.css"
+}

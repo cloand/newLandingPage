@@ -1,0 +1,56 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+}
+
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+form input {
+  width: 100%;
+  margin: .5em 0;
+  padding: .5em 1em;
+  border-radius: .5em;
+  border: .1em solid grey;
+}
+
+form .agreement {
+  padding: 1em 0;
+}
+
+form .agreement .check {
+  width: 2em;
+  height: 2em;
+  border: 2px solid black;
+  margin-right: 1em;
+  border-radius: 50px;
+}
+
+form .agreement label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form .submit {
+  padding: 1.2em 0;
+}
+/*# sourceMappingURL=style.css.map */
